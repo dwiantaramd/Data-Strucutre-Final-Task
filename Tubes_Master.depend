@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1555759369 source:d:\cpp\struktur data\tubes_master\competition.cpp
+	"Competition.h"
+
+1555777423 source:d:\cpp\struktur data\tubes_master\main.cpp
+	"main.h"
+	"menu.h"
+
+1556079181 source:d:\cpp\struktur data\tubes_master\menu.cpp
+	"menu.h"
+
+1556076216 source:d:\cpp\struktur data\tubes_master\personal.cpp
+	"Personal.h"
+
+1556029065 source:d:\cpp\struktur data\tubes_master\relation.cpp
+	"Relation.h"
+
+1555735267 d:\cpp\struktur data\tubes_master\personal.h
+	"main.h"
+
+1555777423 d:\cpp\struktur data\tubes_master\main.h
+	<iostream>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+
+1556079859 d:\cpp\struktur data\tubes_master\menu.h
+	<string>
+	<cstddef>
+	<stdio.h>
+	<iostream>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"main.h"
+	"Personal.h"
+	"Competition.h"
+	"Relation.h"
+
+1555759297 d:\cpp\struktur data\tubes_master\competition.h
+	"main.h"
+
+1555759602 d:\cpp\struktur data\tubes_master\relation.h
+	"Personal.h"
+	"Competition.h"
+	"main.h"
+

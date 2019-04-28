@@ -1,24 +1,24 @@
 # depslib dependency file v1.0
-1555759369 source:d:\cpp\struktur data\tubes_master\competition.cpp
+1556340839 source:d:\cpp\struktur data\tubes_master\competition.cpp
 	"Competition.h"
 
-1555777423 source:d:\cpp\struktur data\tubes_master\main.cpp
+1556374984 source:d:\cpp\struktur data\tubes_master\main.cpp
 	"main.h"
 	"menu.h"
 
-1556079181 source:d:\cpp\struktur data\tubes_master\menu.cpp
+1556364695 source:d:\cpp\struktur data\tubes_master\menu.cpp
 	"menu.h"
 
-1556076216 source:d:\cpp\struktur data\tubes_master\personal.cpp
+1556340839 source:d:\cpp\struktur data\tubes_master\personal.cpp
 	"Personal.h"
 
-1556029065 source:d:\cpp\struktur data\tubes_master\relation.cpp
+1556374978 source:d:\cpp\struktur data\tubes_master\relation.cpp
 	"Relation.h"
 
-1555735267 d:\cpp\struktur data\tubes_master\personal.h
+1556176901 d:\cpp\struktur data\tubes_master\personal.h
 	"main.h"
 
-1555777423 d:\cpp\struktur data\tubes_master\main.h
+1556295438 d:\cpp\struktur data\tubes_master\main.h
 	<iostream>
 	<string>
 	<stdio.h>
@@ -26,7 +26,7 @@
 	<conio.h>
 	<windows.h>
 
-1556079859 d:\cpp\struktur data\tubes_master\menu.h
+1556340513 d:\cpp\struktur data\tubes_master\menu.h
 	<string>
 	<cstddef>
 	<stdio.h>
@@ -39,10 +39,10 @@
 	"Competition.h"
 	"Relation.h"
 
-1555759297 d:\cpp\struktur data\tubes_master\competition.h
+1556176073 d:\cpp\struktur data\tubes_master\competition.h
 	"main.h"
 
-1555759602 d:\cpp\struktur data\tubes_master\relation.h
+1556344719 d:\cpp\struktur data\tubes_master\relation.h
 	"Personal.h"
 	"Competition.h"
 	"main.h"

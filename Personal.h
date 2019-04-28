@@ -10,11 +10,12 @@
 #define prevP(P) P->prevP
 #define firstP(P) P.firstP
 #define lastP(P) P.lastP
+#define ID(P) P->ID
 
 
 typedef struct elmlistP *addressP;
 struct elmlistP {
-    string name,city;
+    string name,city,ID;
     int age;
     addressP nextP,prevP;
 };
@@ -24,7 +25,7 @@ struct ListP{
 };
 
 void Create_ListP(ListP &L);
-addressP AllocationP(string name,string city, int age);
+addressP AllocationP(string name,string city, int age,string idpeserta);
 void DeallocationP(addressP &P);
 void Insert_FirstP(ListP &L, addressP P);
 void Insert_LastP(ListP &L, addressP P);
@@ -35,6 +36,8 @@ void Delete_AfterP(ListP &L, addressP prec, addressP &P);
 void Insert_by_NameP(ListP &L, addressP P);
 void Delete_by_NameP(ListP &L, addressP &P, string name);
 addressP Find_Name_P(ListP L, string x);
+addressP Find_ID_P(ListP L, string x);
 void Print_InfoP(ListP L);
+int CountListP(ListP L);
 
 #endif // PERSONAL_H_INCLUDED

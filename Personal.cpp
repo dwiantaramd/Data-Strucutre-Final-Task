@@ -4,11 +4,12 @@ void Create_ListP(ListP &L){
     firstP(L) = NULL;
     lastP(L) = NULL;
 }
-addressP AllocationP(string name,string city, int age){
+addressP AllocationP(string name,string city, int age,string idpeserta){
     addressP P = new elmlistP;
     name(P) = name;
     city(P) = city;
     age(P) = age;
+    ID(P) = idpeserta;
     nextP(P) = NULL;
     prevP(P) = NULL;
     return P;
@@ -81,6 +82,14 @@ addressP Find_Name_P(ListP L, string x){
     }
     return P;
 }
+addressP Find_ID_P(ListP L, string x){
+    addressP P = NULL;
+    P = firstP(L);
+    while(P!= NULL && ID(P)!= x) {
+        P = nextP(P);
+    }
+    return P;
+}
 void Insert_by_NameP(ListP &L, addressP P){
      if(firstP(L)==NULL){
         lastP(L) = P;
@@ -125,15 +134,24 @@ void Delete_by_NameP(ListP &L, addressP &P, string name){
 }
 void Print_InfoP(ListP L){
     if(firstP(L) == NULL)
-        cout << "Tidak Ada Data yang Terdaftar"<< endl;
+        cout << " Tidak Ada Data Yang Terdaftar" << endl;
     else{
         addressP P = firstP(L);
         int n = 1;
-        cout << "Daftar Nama : " << endl;
         while(P != NULL){
-            cout << n <<". "<< name(P) <<", "<< age(P) <<" Tahun, Asal : " << city(P) << endl;
+            cout << "  " <<n <<". "<< name(P) <<", "<< age(P) <<" Tahun, " << city(P) <<", ID : "<<ID(P) << endl;
             n++;
             P = nextP(P);
         }
+        cout << endl;
     }
+}
+int CountListP(ListP L){
+    int sum = 0;
+    addressP P = firstP(L);
+    while(P != NULL){
+        sum++;
+        P = nextP(P);
+    }
+    return sum;
 }

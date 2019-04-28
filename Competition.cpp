@@ -29,25 +29,28 @@ void Insert_LastC(ListC &L, addressC P){
 
 addressC Find_Name_C(ListC L, string x){
     addressC P = firstC(L);
-    while(nextC(P)!= firstC(L) && Comp_Name(P)!= x) {
-        P = nextC(P);
-    }
-    if(Comp_Name(P) == x)
-        return P;
-    else
+    if(P!= NULL){
+        while(nextC(P)!= firstC(L) && Comp_Name(P)!= x) {
+            P = nextC(P);
+        }
+        if(Comp_Name(P) == x)
+            return P;
+        else
+            return NULL;
+    } else
         return NULL;
 }
 void Delete_by_NameC(ListC &L, addressC &P, string nama){
     P = Find_Name_C(L,nama);
     if(firstC(L)==NULL){
-        cout<< nama <<" Tidak Ditemukan"<<endl;
+        return;
     }else if(firstC(L)==lastC(L)){
         P = firstC(L);
         firstC(L) = NULL;
         lastC(L) = NULL;
     }else{
         if(P == NULL){
-            cout<< nama <<" Tidak Ditemukan"<<endl;
+            return;
         }else{
             if(P == firstC(L)){
                 firstC(L) = nextC(P);
@@ -74,17 +77,31 @@ void Delete_by_NameC(ListC &L, addressC &P, string nama){
 }
 void Print_InfoC(ListC L){
     if(firstC(L) == NULL)
-        cout << "Tidak Ada Data yang Terdaftar"<< endl;
+        cout << " Tidak Ada Data Yang Terdaftar" << endl;
     else{
         addressC P = firstC(L);
         int n = 1;
-        cout << "Daftar Perlombaan : " << endl;
         while(nextC(P) != firstC(L)){
-            cout << n <<". "<< Comp_Name(P) <<", Tempat : "<< place(P) <<", Tahun : " << year(P) << endl;
+            cout << "  "<<n <<". "<< Comp_Name(P) <<", "<< place(P) <<", Tahun : " << year(P) << endl;
             n++;
             P = nextC(P);
         }
-        cout << n <<". "<< Comp_Name(P) <<", Tempat : "<< place(P) <<", Tahun : " << year(P) << endl;
+        cout << "  " << n <<". "<< Comp_Name(P) <<", "<< place(P) <<", Tahun : " << year(P) << endl;
         cout << endl;
     }
+}
+int CountListC(ListC L){
+    int sum = 0;
+    addressC P = firstC(L);
+    if(P != NULL){
+        while(nextC(P)!=firstC(L)){
+            sum++;
+            P = nextC(P);
+        }
+    }
+
+    if(P ==NULL)
+        return 0;
+    else
+        return sum+1;
 }

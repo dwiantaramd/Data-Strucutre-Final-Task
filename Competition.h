@@ -29,5 +29,6 @@ void Insert_LastC(ListC &L, addressC P);
 addressC Find_Name_C(ListC L, string x);
 void Delete_by_NameC(ListC &L, addressC &P, string nama);
 void Print_InfoC(ListC L);
+int CountListC(ListC L);
 
 #endif // COMPETITION_H_INCLUDED
